@@ -1,27 +1,33 @@
 # Product Requirements Document (PRD)
-## Random Security Quiz App
+## Security Quiz Pro
 
 ### 1. Product Overview
 
-**Product Name:** Random Security Quiz App  
-**Version:** 1.0  
-**Type:** Educational Terminal Application  
+**Product Name:** Security Quiz Pro  
+**Version:** 2.0  
+**Type:** Multi-Platform Educational Application (Terminal + Web)  
 **Target Audience:** Cybersecurity professionals, students, and enthusiasts  
+**Platforms:** Terminal-based Python app + Modern Web application  
 
 ### 2. Product Vision & Goals
 
 **Vision Statement:**  
-To provide an engaging, terminal-based educational tool that helps users test and improve their cybersecurity knowledge through randomized quizzes.
+To provide engaging, multi-platform educational tools that help users test and improve their cybersecurity knowledge through randomized quizzes, available both as a terminal application and modern web interface.
 
 **Primary Goals:**
-- Create an accessible learning tool for cybersecurity concepts
+- Create accessible learning tools for cybersecurity concepts across multiple platforms
 - Provide immediate feedback and explanations for better learning outcomes
 - Offer flexible quiz lengths to accommodate different time constraints
-- Deliver a visually appealing terminal experience with colors and animations
+- Deliver visually appealing experiences with colors, animations, and modern UI design
+- Bridge the gap between terminal-based and web-based educational tools
 
 ### 3. Core Features
 
-#### 3.1 Quiz Functionality
+#### 3.1 Dual Platform Support
+- **Terminal Version (Python):** Command-line interface with ANSI colors
+- **Web Version (HTML/CSS/JS):** Modern browser-based interface with animations
+
+#### 3.2 Quiz Functionality
 - **Question Bank:** 15 comprehensive cybersecurity questions covering:
   - SQL Injection and web security
   - Network protocols and security (SFTP, HTTPS)
@@ -35,17 +41,22 @@ To provide an engaging, terminal-based educational tool that helps users test an
 - **Multiple Choice Format:** Four options (A, B, C, D) per question
 - **Flexible Quiz Length:** User can choose 1-15 questions per session
 
-#### 3.2 User Experience
-- **Visual Interface:**
-  - ANSI color coding for enhanced readability
-  - Loading animations and progress indicators
-  - Clear question numbering and formatting
-  - Visual feedback for correct/incorrect answers
+#### 3.3 Terminal Version Features
+- **ANSI Color Interface:** Enhanced readability with color coding
+- **Loading Animations:** Text-based progress indicators
+- **Keyboard Input:** Traditional terminal interaction
+- **Cross-platform compatibility:** Works on Windows, macOS, Linux
 
-- **Interactive Elements:**
-  - Input validation for answer selection
-  - Error handling for invalid inputs
-  - Play again functionality for continuous learning
+#### 3.4 Web Version Features
+- **Modern UI Design:** Glass-morphism with gradient backgrounds
+- **Advanced Animations:** Smooth transitions, particle effects, hover animations
+- **Interactive Elements:** 
+  - Range slider for question selection
+  - Click-based answer selection
+  - Animated progress bar with moving stripes
+  - Pulse/shake feedback for answers
+- **Responsive Design:** Mobile and desktop friendly
+- **Visual Effects:** Floating particles, rotating backgrounds, bouncing badges
 
 #### 3.3 Educational Features
 - **Immediate Feedback:** Instant notification of correct/incorrect answers
@@ -60,27 +71,37 @@ To provide an engaging, terminal-based educational tool that helps users test an
 
 ### 4. Technical Specifications
 
-#### 4.1 Platform Requirements
+#### 4.1 Terminal Version Requirements
 - **Language:** Python 3.x
 - **Dependencies:** Standard library only (no external packages required)
 - **Compatibility:** Cross-platform terminal support
 - **Execution:** Command-line interface
 
-#### 4.2 Architecture
-- **Single File Design:** Self-contained application in one Python file
+#### 4.2 Web Version Requirements
+- **Languages:** HTML5, CSS3, JavaScript (ES6+)
+- **Dependencies:** None (pure vanilla JavaScript)
+- **Compatibility:** Modern web browsers (Chrome, Firefox, Safari, Edge)
+- **Responsive:** Mobile and desktop support
+
+#### 4.3 Architecture
+- **Dual Implementation:** 
+  - Python: Single file terminal application
+  - Web: Single HTML file with embedded CSS/JS
 - **Modular Structure:**
   - Question bank as data structure
-  - Color management system
-  - UI helper functions
+  - UI management (ANSI colors / CSS animations)
   - Quiz logic functions
-  - Main application flow
+  - Score calculation and grading
+  - Cross-platform compatibility layer
 
-#### 4.3 Data Management
-- **Question Storage:** In-memory dictionary structure containing:
+#### 4.4 Data Management
+- **Question Storage:** In-memory data structures containing:
   - Question text
   - Four multiple-choice options
-  - Correct answer
+  - Correct answer index
   - Educational explanation
+- **Session Management:** Temporary state during quiz execution
+- **No Persistence:** Stateless applications for simplicity
 
 ### 5. User Stories
 
